@@ -33,7 +33,7 @@ class SeleniumTest {
 
     @Test
     void shouldSetPersonalInfoTest() {
-        driver.findElement(By.xpath("//span[@data-test-id='name']//input")).sendKeys("Тодорико Сергей");
+        driver.findElement(By.xpath("//span[@data-test-id='name']//input")).sendKeys("Аладьев Дмитрий");
         driver.findElement(By.xpath("//span[@data-test-id='phone']//input")).sendKeys("+79258582575");
         driver.findElement(By.xpath(".//span[contains(@class, 'checkbox__box')]")).click();
         driver.findElement(By.xpath(".//span[contains(text(), 'Продолжить')]")).click();
@@ -44,7 +44,7 @@ class SeleniumTest {
 
     @Test
     void shouldFailIfNameIsNotRussian() {
-        driver.findElement(By.xpath("//span[@data-test-id='name']//input")).sendKeys("Todoriko Sergei");
+        driver.findElement(By.xpath("//span[@data-test-id='name']//input")).sendKeys("Aladyev Dmitriy");
         driver.findElement(By.xpath("//span[@data-test-id='phone']//input")).sendKeys("+79258582575");
         driver.findElement(By.xpath(".//span[contains(@class, 'checkbox__box')]")).click();
         driver.findElement(By.xpath(".//span[contains(text(), 'Продолжить')]")).click();
@@ -56,7 +56,7 @@ class SeleniumTest {
 
     @Test
     void shouldFailIfWrongNumber() {
-        driver.findElement(By.xpath("//span[@data-test-id='name']//input")).sendKeys("Тодорико Сергей");
+        driver.findElement(By.xpath("//span[@data-test-id='name']//input")).sendKeys("Аладьев Дмитрий");
         driver.findElement(By.xpath("//span[@data-test-id='phone']//input")).sendKeys("+7925858257");
         driver.findElement(By.xpath(".//span[contains(@class, 'checkbox__box')]")).click();
         driver.findElement(By.xpath(".//span[contains(text(), 'Продолжить')]")).click();
@@ -80,7 +80,7 @@ class SeleniumTest {
 
     @Test
     void shouldFailIfPhoneInputIsEmpty() {
-        driver.findElement(By.xpath("//span[@data-test-id='name']//input")).sendKeys("Тодорико Сергей");
+        driver.findElement(By.xpath("//span[@data-test-id='name']//input")).sendKeys("Аладьев Дмитрий");
         driver.findElement(By.xpath("//span[@data-test-id='phone']//input")).sendKeys("");
         driver.findElement(By.xpath(".//span[contains(@class, 'checkbox__box')]")).click();
         driver.findElement(By.xpath(".//span[contains(text(), 'Продолжить')]")).click();
@@ -92,7 +92,7 @@ class SeleniumTest {
 
     @Test
     void shouldFailIfCheckboxIsEmpty() {
-        driver.findElement(By.xpath("//span[@data-test-id='name']//input")).sendKeys("Тодорико Сергей");
+        driver.findElement(By.xpath("//span[@data-test-id='name']//input")).sendKeys("Аладьев Дмитрий");
         driver.findElement(By.xpath("//span[@data-test-id='phone']//input")).sendKeys("+79258582575");
         driver.findElement(By.xpath(".//span[contains(text(), 'Продолжить')]")).click();
         String actualMessage = driver.findElement(By.xpath("//label[contains(@class, 'input_invalid')]//span[contains(@class, 'checkbox__text')]")).getText();
